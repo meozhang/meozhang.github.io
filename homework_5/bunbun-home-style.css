@@ -83,7 +83,7 @@ p{
     display: block;
 }
 
-button{
+.button, button{
     border-radius: 20px;
     border: solid 2px #E9C467;
     background-color: #E9C467;
@@ -95,7 +95,7 @@ button{
     font-size: 18px;
     font-weight:normal; 
 }
-button:hover{
+.button:hover, button:hover{
     background-color: #7C5B04;
     border:#7C5B04;
     color: white;
@@ -125,9 +125,8 @@ li, a{
     grid-column:3/4;
 }
 
-nav button{
+#nav-cart a div{
     display: inline-block;
-    float: right;
     background-color: white;
     width: 120px;
     height:50px;
@@ -205,7 +204,7 @@ li a:hover{
 
 #seasonal #sea_1{
     grid-area: 2 / 2 / 3 / 3 ;
-    background: linear-gradient(0deg, rgba(0, 0, 0, 0.50), rgba(0, 0, 0, 0.25)), url(assets/Seasonal_Pumpkin\ Spice.jpg);
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.50), rgba(0, 0, 0, 0.25)), url(assets/Seasonal_PumpkinSpice.jpg);
     background-size: 100%;
 }
 

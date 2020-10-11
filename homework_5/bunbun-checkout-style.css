@@ -93,11 +93,14 @@ p{
     font-family: 'Raleway', sans-serif;
     font-size: 18px;
     font-weight:normal; 
+    color:white;
     cursor: pointer;
+
+    margin-top: 12px;
 }
 .yellow-but:hover{
     background-color: #7C5B04;
-    border:#7C5B04;
+    border:solid 2px #7C5B04;
     color: white;
     transition: 250ms;
 }
