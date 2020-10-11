@@ -1,0 +1,274 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bunbun Bake Shop</title>
+
+    <!--GOOGLE FONTS-->
+    <link href="https://fonts.googleapis.com/css2?family=Reenie+Beanie&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;600&display=swap" rel="stylesheet">
+
+    
+    <link rel="logo_favicon" href="assets/logo_favicon.png">
+
+    <!-- css -->
+    <link rel="stylesheet" href="bunbun-home-style.css">
+    <!-- javascript -->
+    
+
+  </head>
+
+  <body>
+    <div class = "container">
+      
+      <!--Header-->
+      <header class="container">
+        <div class="text-overlay">
+          <h1 class="centered">BUN BUN</h1>
+          <img src="assets/logo drawing_white.png" alt="bunbun logo" style="height:100px; width:auto; display:inline-block;"/>
+          <h3>bake shop</h3>
+        </div>
+      </header>
+
+      <!--Navigation-->
+      <nav>
+        <ul id="nav-links">
+          <li><a href='bunbun-home.html'>home</a></li>
+          <li><a href='bunbun-home.html#product_lib'>pastry</a></li>
+          <li><a href='bunbun-home.html#home_contact'>contact</a></li>  
+        </ul>
+        <div id="nav-cart">
+           <a href='bunbun-checkout.html'><button>cart</button></a>
+        </div>  
+      </nav>
+  
+      <main>
+        <!--Seasonal Special-->
+        <section id="seasonal">
+            <div id="sea_title">
+              <h2>seasonal special</h2>
+            </div>
+            <div class ="box" id= 'sea_1'>
+                <h3>PUMPKIN SPICE</h3>
+            </div>
+            <div class ="box" id='sea_2'> 
+                <h3>CARAMEL PECAN</h3>
+            </div> 
+        </section>
+
+        <section id="product_lib">
+          <h2>our pastries</h2>
+          <div id = "product_filter">
+              <ul>
+                <li class="sm-button">all</li>
+                <li class="sm-button">gluten free</li>
+                <li class="sm-button">nutty</li>
+                <li class="sm-button">fruity</li>
+              </ul>
+          </div>
+          <!--Product A -->
+          <div class="product-block" id="pro_a">
+              
+              <img class="learn-more" src="assets/product_original.jpg" alt="product: original bun" style ='width:240px; height:240px'/>
+              <div>
+                  <h3>original</h3>
+                  <h4>$3.50</h4>
+              </div>
+              <p>This delicious bunbun original  will bright up your mornings!</p>
+              <ul>
+                <li>1</li>
+                <li>3</li>
+                <li>6</li>
+                <li>12</li>
+              </ul>
+              <button>add to cart</button>
+          </div>
+
+          <!--Product B -->
+          <div class="product-block" id="pro_b">
+              <img class="learn-more" src="assets/product_blueberry.jpg" alt="product: blueberry bun" style ='width:240px; height:240px'/>
+              <h3>blueberry</h3>
+              <h4>$4.00</h4>
+              <p>Always blueberry season! Made with love and local berries.</p>
+              <ul>
+                <li>1</li>
+                <li>3</li>
+                <li>6</li>
+                <li>12</li>
+              </ul>
+              <button>add to cart</button>
+          </div>
+
+          <!--Product C -->
+          <div class="product-block" id="pro_c">
+              <img class="learn-more" src="assets/product_walnut.jpg" alt="product: walnut bun" style ='width:240px; height:240px'/>
+              <h3>walnut</h3>
+              <h4>$4.00</h4>
+              <p>Tired of work and study? Get some awesome walnuts.</p>
+              <ul>
+                <li>1</li>
+                <li>3</li>
+                <li>6</li>
+                <li>12</li>
+              </ul>
+              <button>add to cart</button>
+          </div>
+
+          <!--Product D -->
+          <div class="product-block" id="pro_d">
+              <img class="learn-more" src="assets/product_original gfree.jpg" alt="product: original bun gluten-free" style ='width:240px; height:240px'/>
+              <h3>gluten-free</h3>
+              <h4>$3.50</h4>
+              <p>The delicious bunbun original, even better, gluten free.</p>
+              <ul>
+                <li>1</li>
+                <li>3</li>
+                <li>6</li>
+                <li>12</li>
+              </ul>
+              <button>add to cart</button>
+          </div>
+
+          <!--Product E -->
+          <div class="product-block" id="pro_e">
+              <img class="learn-more" src="assets/Product_pumpkin spice.jpg" alt="product: pumpkin spice bun" style ='width:240px; height:240px'/>
+              <h3>pumpkin spice</h3>
+              <h4>$4.00</h4>
+              <p>Begin the beautiful fall with the sweet and flavorful bun.</p>
+              <ul>
+                <li>1</li>
+                <li>3</li>
+                <li>6</li>
+                <li>12</li>
+              </ul>
+              <button>add to cart</button>
+          </div>
+
+          <!--Product F -->
+          <div class="product-block" id="pro_f">
+              <img class="learn-more" src="assets/product_pecan.jpg" alt="product: pecan caramel bun" style ='width:240px; height:240px'/>
+              <h3>pecan caramel</h3>
+              <h4>$4.00</h4>
+              <p>Doubled your favorite flavors, pecan and caramel</p>
+              <ul>
+                <li>1</li>
+                <li>3</li>
+                <li>6</li>
+                <li>12</li>
+              </ul>
+              <button>add to cart</button>
+          </div>
+        </section>
+
+        
+
+        <!-- The Modal -->
+        <div id="modal" class="modal-bg">
+
+          <!-- Modal content -->
+          <div class="modal-content">
+            <div id="modal-sec1">
+                <span class="close">&times;</span>
+                <img src="assets/product_blueberry.jpg" alt="product:blueberry">
+                <h2>blueberry</h2>
+                <p>Always blueberry season! Made with love and local berries.</p>
+                <h4>$4.00</h4>
+            </div>
+
+            <div id="modal-sec2">
+              <p>choose a glazing</p>  
+              <p>
+                  <span class="sm-button">none</span>
+                  <span class="sm-button">double chocolate +0.35</span>
+                  <span class="sm-button">sugar milk +0.25</span>
+                  <span class="sm-button">vanilla milk +0.25</span>
+              </p>
+
+              <p>quantity
+                  <span class="sm-button">&minus;</span>3
+                  <span class="sm-button">&plus;</span>
+              </p>
+
+                <button><a>add to cart</a></button>
+            </div>
+
+            <div id="modal-sec3">
+              <div class= "hline" id="line-1"></div>
+              <div class="collap-before">&plus;</div>
+              <p style="margin:8px 10px 12px 0px;">reviews<span class="star">&#9733; &#9733; &#9733; &#9733; &#10025;</span> (125)</p>
+
+              <div class= "hline" id="line-2"></div>
+              <div class="collap-before">&plus;</div>     
+              <p>ingredients | nutritions</p>
+
+              <div class= "hline" id="line-3"></div>
+              <div class="collap-before">&plus;</div>     
+              <p>allergies</p>
+
+              <div class= "hline" id="line-4"></div> 
+
+            </div>
+
+          </div>
+
+        </div>
+
+        <script>
+        // Get the modal
+        var modal = document.getElementById("modal");
+
+        // Get the button that opens the modal
+        var btn = document.getElementById("pro_f");
+        //var btn = document.getElementsByClassName("learn-more");
+
+        // Get the <span> element that closes the modal
+        var span = document.getElementsByClassName("close")[0];
+
+        // When the user clicks the button, open the modal 
+        btn.onclick = function() {
+          modal.style.display = "block";
+        }
+
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function() {
+          modal.style.display = "none";
+        }
+
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function(event) {
+          if (event.target == modal) {
+            modal.style.display = "none";
+          }
+        }
+        </script>
+
+
+
+        <!-- Contact Us-->
+        <section id="home_contact">
+            <h2>other flavours you like?</h2>
+            <h3>let us know!</h3>
+            <p>Craving a special flavor? Want to let us know what’s your favorite flavors? Please contact us! We are proud to offer rotating seasonal specials, limited time surprise flavor pop-ups, cutomization for special occasions(10 days in advance). We’d love to hear from you!</p>
+            <button>contact us</button>
+        </section>
+      </main>
+      
+      <footer>
+        <ul id="footer-links">
+          <li><a href='bunbun-home.html'>home</a></li>
+          <li><a href='bunbun-home.html#product_lib'>pastry</a></li>
+          <li><a href='bunbun-home.html#home_contact'>contact</a></li>  
+        </ul>
+        <div>
+          <p>FOLLOW US</p>
+        </div>
+      </footer>
+
+    </div>
+  </body>
+</html>
+
+<!-- Meo Zhang 2020 --->

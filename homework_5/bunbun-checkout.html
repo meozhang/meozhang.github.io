@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bunbun Bake Shop</title>
+
+    <!--GOOGLE FONTS-->
+    <link href="https://fonts.googleapis.com/css2?family=Reenie+Beanie&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;600&display=swap" rel="stylesheet">
+
+    
+    <link rel="logo_favicon" href="assets/logo_favicon.png">
+
+    <link rel="stylesheet" href="bunbun-checkout-style.css">
+  </head>
+
+  <body>
+    <div class = "container">
+
+      <!--Navigation-->
+      <nav>
+        <ul id="nav-links">
+          <li><a href='bunbun-home.html'>home</a></li>
+          <li><a href='bunbun-home.html#product_lib'>pastry</a></li>
+          <li><a href='bunbun-home.html#home_contact'>contact</a></li>  
+        </ul>
+      </nav>
+  
+      <main>
+        <!--Your Cart-->
+        <section id="cart">
+          <div id="cont-shop">
+              <a href="bunbun-home.html#product_lib"> <button class="white-but" style="width:250px;"> &#8672; continue shopping</button></a>
+          </div>
+            <div class= "hline" id="line-1"></div>
+
+            <!-- 1st Item -->
+            <div id="cart-1">
+                <img src="assets/product_blueberry.jpg"/>
+                <div class="sym-close">&#10006;</div>
+                <h3>blackberry</h3>
+                <p><span class="choice">glazing</span>double chocolate +0.35<span class="sm-button">change</span></p>
+                <p>
+                  <span class="choice">quantity</span>
+                  <span class="sm-button">&minus;</span>3
+                  <span class="sm-button">&plus;</span>
+                </p>
+                
+                <h4>$4.35</h4>
+            </div>
+
+            <div class= "hline" id="line-2"></div>
+
+            <!-- 2nd Item -->
+            <div id="cart-2">
+                <img src="assets/product_original.jpg"/>
+                <div class="sym-close">&#10006;</div>
+                <h3>original</h3>
+                <p><span class="choice">glazing</span>none
+                  <span class="sm-button">change</span></p>
+                <p>
+                    <span class="choice">quantity</span>
+                    <span class="sm-button">&minus;</span>3
+                    <span class="sm-button">&plus;</span>
+                </p>
+                <h4>$3.50</h4>
+            </div>
+
+            <div class= "hline" id="line-3"></div>
+
+            <!-- SUB TOTAL -->
+            <div id="subtotal">
+                <h3>subtotal</h3>
+                <p>(delivery + tax may apply)</p>
+                <h4>$23.55</h4>
+            </div>
+
+            <div id="checkout">
+                <a href="bunbun-deliver.html"><button class="yellow-but" style="width:250px;">checkout</button></a>
+                <p>next: pick up / delivery</p>
+            </div>
+
+            <!--side progress bar -->
+            <div id="progress-bar">
+              <div id="progress-cart">
+                <div class="circle-active"></div>
+                <p>your cart</p>
+              </div>
+              <div id="progress-deli">
+                <div class="circle"></div>
+                <p>pickup/delivery</p>
+              </div>
+              <div id="progress-pay">
+                <div class="circle"></div>
+                <p>payment</p>
+              </div>
+              <div id="progress-confirm">
+                <div class="circle"></div>
+                <p>confirm</p>
+              </div>
+            </div>
+            
+        </section>
+
+        <section id="product_lib">
+          <h2>more yummy pastries</h2>
+          <!--Product A -->
+          <div class="product-block" id="pro_a">
+              
+              <img src="assets/product_original.jpg" alt="product: original bun" style ='width:240px; height:240px'/>
+              <div>
+                  <h3>original</h3>
+                  <h4>$3.50</h4>
+              </div>
+              <p>This delicious bunbun original  will bright up your mornings!</p>
+              <ul>
+                <li>1</li>
+                <li>3</li>
+                <li>6</li>
+                <li>12</li>
+              </ul>
+              <button button class="yellow-but">add to cart</button>
+          </div>
+
+          <!--Product B -->
+          <div class="product-block" id="pro_b">
+              <img src="assets/product_blueberry.jpg" alt="product: blueberry bun" style ='width:240px; height:240px'/>
+              <h3>blueberry</h3>
+              <h4>$4.00</h4>
+              <p>Always blueberry season! Made with love and local berries.</p>
+              <ul>
+                <li>1</li>
+                <li>3</li>
+                <li>6</li>
+                <li>12</li>
+              </ul>
+              <button button class="yellow-but">add to cart</button>
+          </div>
+
+          <!--Product C -->
+          <div class="product-block" id="pro_c">
+              <img src="assets/product_walnut.jpg" alt="product: walnut bun" style ='width:240px; height:240px'/>
+              <h3>walnut</h3>
+              <h4>$4.00</h4>
+              <p>Tired of work and study? Get some awesome walnuts.</p>
+              <ul>
+                <li>1</li>
+                <li>3</li>
+                <li>6</li>
+                <li>12</li>
+              </ul>
+              <button button class="yellow-but">add to cart</button>
+          </div>
+        </section>
+
+
+      </main>
+      
+      <footer>
+        <ul id="footer-links">
+          <li><a href='bunbun-home.html'>home</a></li>
+          <li><a href='bunbun-home.html#product_lib'>pastry</a></li>
+          <li><a href='bunbun-home.html#home_contact'>contact</a></li>  
+        </ul>
+        <div>
+          <p>FOLLOW US</p>
+        </div>
+      </footer>
+
+    </div>
+  </body>
+</html>
+
+<!-- Meo Zhang 2020 --->
