@@ -6,7 +6,7 @@ body{
 header{
     height:400px;
     padding: 0px;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url("assets/home_hero\ image.jpg");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url("../assets/home_heroImage.jpg");
     background-size: 100%;
     background-position: 25% 50%;
     }
@@ -211,13 +211,13 @@ li a:hover{
 
 #seasonal #sea_1{
     grid-area: 2 / 2 / 3 / 3 ;
-    background: linear-gradient(0deg, rgba(0, 0, 0, 0.50), rgba(0, 0, 0, 0.25)), url(assets/Seasonal_PumpkinSpice.jpg);
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.50), rgba(0, 0, 0, 0.25)), url(../assets/Seasonal_PumpkinSpice.jpg);
     background-size: 100%;
 }
 
 #seasonal #sea_2{
     grid-area: 2 / 3 / 3 / 4 ;
-    background: linear-gradient(0deg, rgba(0, 0, 0, 0.50), rgba(0, 0, 0, 0.25)), url(assets/Seasonal_pecan.jpg);
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.50), rgba(0, 0, 0, 0.25)), url(../assets/Seasonal_pecan.jpg);
     background-size: 100%;
 } 
 
