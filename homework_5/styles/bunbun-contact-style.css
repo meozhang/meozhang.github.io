@@ -103,6 +103,26 @@ p{
     transition: 250ms;
 }
 
+.white-but{
+    border-radius: 20px;
+    border: solid 2px #E9C467;
+    background-color: white;
+    color:#E9C467;
+    width: 100%;
+    height:28px;
+    text-align: center;
+
+    font-family: 'Raleway', sans-serif;
+    font-size: 18px;
+    font-weight:normal; 
+    cursor: pointer;
+}
+.white-but:hover{
+    background-color:#E9C467;
+    color: white;
+    transition: 250ms;
+}
+
 ul{
     margin-top: 0px;
     margin-bottom:0px;
@@ -143,6 +163,12 @@ li, a{
     transition: 250ms;
 }
 
+#cart-icon{
+    display:inline-block;
+    float: left;
+    margin-left: 20px;
+    margin-top: 2px;
+}
 
 nav ul{
     display: inline-block;

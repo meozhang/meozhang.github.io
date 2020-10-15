@@ -97,7 +97,7 @@ p{
 }
 .button:hover, button:hover{
     background-color: #7C5B04;
-    border:#7C5B04;
+    border:solid 2px #7C5B04;
     color: white;
     transition: 250ms;
 }
@@ -140,6 +140,13 @@ li, a{
     border:#7C5B04;
     color: white;
     transition: 250ms;
+}
+
+#cart-icon{
+    display:inline-block;
+    float: left;
+    margin-left: 20px;
+    margin-top: 2px;
 }
 
 
@@ -483,10 +490,12 @@ li a:hover{
     grid-area: 3/2/4/3;
     margin:0px;
 }
-#home_contact button{
+#home_contact a {
     grid-area: 4/2/5/3;
     width: 200px;
     margin-top: 16px;
+    text-decoration: none;
+    color: white;
 }
 
 /*footer styling*/
