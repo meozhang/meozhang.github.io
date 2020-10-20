@@ -309,7 +309,7 @@ li a:hover{
 }
 
 
-.product-block li{
+.order-num{
     border-radius: 20px;
     border: solid 2px #E9C467;
     width: 48px;
@@ -321,10 +321,11 @@ li a:hover{
     font-weight:normal; 
 }
 
-.product-block li:hover{
+.order-num:hover, .active{
     background-color: #E9C467;
     transition: 250ms;
 }
+
 
 .product-block button{
     margin-top: 12px;
