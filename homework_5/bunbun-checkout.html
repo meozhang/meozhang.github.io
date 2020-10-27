@@ -15,9 +15,10 @@
     <link rel="icon" type="image/png" href="assets/logo_favicon.png">
 
     <link rel="stylesheet" href="styles/bunbun-checkout-style.css">
+    
   </head>
 
-  <body>
+  <body onload="onLoad()">
     <div class = "container">
 
       <!--Navigation-->
@@ -27,6 +28,14 @@
           <li><a href='bunbun-home.html#product_lib'>pastry</a></li>
           <li><a href='bunbun-contact.html'>contact</a></li>  
         </ul>
+        <div id="nav-cart">
+           <a href='bunbun-checkout.html'>
+            <div class="button" style="border-radius: 20px;">
+              <img id="cart-icon" src="assets/icon_cart.png" alt="icon:cart"/>
+              <p id="cart-num" style="font-size: 24px; margin-top:8px;">0</p>
+            </div>
+           </a>
+        </div>  
       </nav>
   
       <main>
@@ -75,7 +84,7 @@
             <div id="subtotal">
                 <h3>subtotal</h3>
                 <p>(delivery + tax may apply)</p>
-                <h4>$23.55</h4>
+                <h4 id="subtotalNum">$23.55</h4>
             </div>
 
             <div id="checkout">
@@ -156,7 +165,7 @@
           </div>
         </section>
 
-
+        <script type="text/javascript" src="./javascript/bunbun-checkout.js"></script>
       </main>
       
       <footer>
