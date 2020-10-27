@@ -184,18 +184,19 @@
             <div id="modal-sec2">
               <p>choose a glazing</p>  
               <p>
-                  <span class="sm-button">none</span>
-                  <span class="sm-button">double chocolate +0.35</span>
-                  <span class="sm-button">sugar milk +0.25</span>
-                  <span class="sm-button">vanilla milk +0.25</span>
+                  <span class="sm-button modal-glazing sm-active">none</span>
+                  <span class="sm-button modal-glazing">double chocolate +0.35</span>
+                  <span class="sm-button modal-glazing">sugar milk +0.25</span>
+                  <span class="sm-button modal-glazing">vanilla milk +0.25</span>
               </p>
 
               <p>quantity
-                  <span class="sm-button">&minus;</span>3
-                  <span class="sm-button">&plus;</span>
+                  <span class="sm-button unselectable" id="sm-minus">&minus;</span>
+                  <input type="number" class="purchase-amount-input" id="modal-purchase-amount" min="1" value="1" required>
+                  <span class="sm-button unselectable" id="sm-plus">&plus;</span>
               </p>
 
-                <button>add to cart</button>
+                <button class="modal-add-button">add to cart</button>
             </div>
 
             <div id="modal-sec3">

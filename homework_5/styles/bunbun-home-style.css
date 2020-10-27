@@ -94,6 +94,7 @@ p{
     font-family: 'Raleway', sans-serif;
     font-size: 18px;
     font-weight:normal; 
+    cursor: pointer;
 }
 .button:hover, button:hover{
     background-color: #7C5B04;
@@ -112,8 +113,15 @@ ul{
 li, a{
     display: inline-block;
     align-items: center;
+    cursor: pointer;
 }
 
+input, select{
+    border-radius: 4px;
+    border: solid 2px #E9C467;
+    color: black;
+    min-height:24px;
+}
 
 /* navigation */
 
@@ -151,7 +159,6 @@ li, a{
 
 
 nav ul{
-    display: inline-block;
     width: 800px;
     margin: auto;
 }
@@ -336,6 +343,7 @@ li a:hover{
 .product-picture:hover{
     opacity: 0.7;
     transition: 250ms;
+    cursor: pointer;
 }
 
 
@@ -401,6 +409,14 @@ li a:hover{
       margin-top: 0.8em;
   }
 
+  .purchase-amount-input{
+      max-width: 60px;
+      text-align: center;
+      margin-top: 5px;
+      z-index: 1;
+      position: absolute;
+  }
+
   .sm-button{
     font-family:'Raleway', sans-serif;
     font-style: normal;
@@ -408,6 +424,7 @@ li a:hover{
     font-size: 16px;
     line-height: 40px;
     text-align: center;
+    white-space: nowrap;
     
     background-color: white;
     padding: 1px 10px 1px 10px;
@@ -415,13 +432,57 @@ li a:hover{
     border: solid 2px #E9C467;
     color: #E9C467;
     margin:6px;
+    cursor: pointer;
 }
 
-.sm-button:hover{
+.sm-button:hover, .sm-active{
     background-color:#E9C467;
     opacity: 0.7;
     color: white;
     transition: 250ms;
+}
+
+#sm-plus{
+    z-index: 5;
+    margin-left: 50px;
+    position: relative;
+    font-size: 20px;
+}
+
+#sm-minus{
+    position: relative;
+    z-index: 5;
+    margin-right: -20px;
+    font-size: 20px;
+}
+
+#sm-plus:hover{
+    opacity: 1;
+}
+
+#sm-minus:hover{
+    opacity: 1;
+}
+
+.unselectable {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
 }
 
 .hline{
