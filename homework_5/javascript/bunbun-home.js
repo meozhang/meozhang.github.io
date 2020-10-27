@@ -1,5 +1,71 @@
 //GLOBAL VARIBLES
+
 var totalCartNum = 0;
+var cartList = [];
+
+
+// Items adding to the card
+class CartItem {
+    constructor(name, price, quantity, glazing) {
+      this.name = name;
+      this.price = price;
+      this.quantity = quantity;
+      this.glazing = glazing;
+    }
+  }
+
+
+//Update Number of Items in Cart
+function updateCartValue(amount){
+    totalCartNum += amount;
+    console.log(totalCartNum);
+    document.getElementById("cart-num").innerHTML = totalCartNum;
+}
+
+//HOME page: create a new CartItem object when click on add to cart
+function addCartItem(addBtn,amount){
+    var name = addBtn.parentElement.getElementsByClassName("product-title")[0].innerText;
+    var price = addBtn.parentElement.getElementsByClassName("product-price")[0].innerText;
+    var glazing = "none;"
+    var quantity = amount;
+    let itemToAdd = new CartItem(name, price, quantity, glazing);
+    cartList.push(itemToAdd);
+    console.log(cartList);
+}
+
+//MODAL page: create a new CartItem object
+function addCartItem2(amount){
+    var modal = document.getElementsByClassName("modal-content")[0]
+
+    var name = modal.getElementsByClassName("modal-title")[0].innerText;
+    var price = modal.getElementsByClassName("modal-price")[0].innerText;
+    var glazing = modal.getElementsByClassName("sm-active")[0].innerText;
+    var quantity = amount;
+
+    let itemToAdd = new CartItem(name, price, quantity, glazing);
+    cartList.push(itemToAdd);
+    console.log(cartList);
+}
+
+//Update Local Storage
+function setLocalStr(){
+    localStorage.setItem("totalCartNum", JSON.stringify(totalCartNum));
+    localStorage.setItem("cartList",JSON.stringify(cartList));
+    document.getElementById("cart-num").innerHTML = totalCartNum;
+}
+
+//Fetch from Local Storage
+function getLocalStr(){
+    totalCartNum = JSON.parse(localStorage.getItem("totalCartNum"));
+    cartList = JSON.parse(localStorage.getItem("cartList"));
+} 
+
+//Button display "added" onclick
+function displayAdded(button) {
+    button.innerHTML="add to cart";
+}
+
+
 
 
 // HOME: SELECT THE NUMBER + ADD TO CART
@@ -38,6 +104,13 @@ for (i = 0; i < allProduct.length; i++) {
 
         //update totalCartNum
         updateCartValue(parseInt(orderNumActive[0].innerHTML));
+
+        //update cartList
+        addCartItem(this, parseInt(orderNumActive[0].innerHTML));
+
+        //update local sttorage
+        setLocalStr();
+        
         
         this.innerHTML="added &#10003;";
         setTimeout(displayAdded, 1500, this);
@@ -60,10 +133,34 @@ function updateCartValue(amount){
     document.getElementById("cart-num").innerHTML = totalCartNum;
 }
 
+//HOME page: create a new CartItem object when click on add to cart
+function addCartItem(addBtn,amount){
+    var name = addBtn.parentElement.getElementsByClassName("product-title")[0].innerText;
+    var price = addBtn.parentElement.getElementsByClassName("product-price")[0].innerText;
+    var glazing = "none;"
+    var quantity = amount;
+    let itemToAdd = new CartItem(name, price, quantity, glazing);
+    cartList.push(itemToAdd);
+    console.log(cartList);
+}
+
+//MODAL page: create a new CartItem object
+function addCartItem2(amount){
+    var modal = document.getElementsByClassName("modal-content")[0]
+
+    var name = modal.getElementsByClassName("modal-title")[0].innerText;
+    var price = modal.getElementsByClassName("modal-price")[0].innerText;
+    var glazing = modal.getElementsByClassName("sm-active")[0].innerText;
+    var quantity = amount;
+
+    let itemToAdd = new CartItem(name, price, quantity, glazing);
+    cartList.push(itemToAdd);
+    console.log(cartList);
+}
 
 
 
-// PRODUCT DETAIL: UPDATE THE PRODUCT DETAIL MODAL
+// PRODUCT DETAIL: UPDATE THE MODAL
 // Get the modal
 var modal = document.getElementById("modal");
 
@@ -135,7 +232,14 @@ for (i = 0; i < allModalGlazingButtons.length; i++) {
 
 // modal add to cart button
 document.getElementsByClassName("modal-add-button")[0].onclick = function() {
+    //update totalCartNum
     updateCartValue(parseInt(modalPurchase.value));
+
+    //update cartList
+    addCartItem2(parseInt(modalPurchase.value));
+
+    //update local sttorage
+    setLocalStr();
 
     this.innerHTML="added &#10003;";
     setTimeout(displayAdded, 1500, this);

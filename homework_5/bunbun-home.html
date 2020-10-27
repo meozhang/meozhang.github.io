@@ -66,7 +66,7 @@
           <h2>our pastries</h2>
           <div id = "product_filter">
               <ul>
-                <li class="sm-button">all</li>
+                <li class="sm-button sm-active">all</li>
                 <li class="sm-button">gluten free</li>
                 <li class="sm-button">nutty</li>
                 <li class="sm-button">fruity</li>
@@ -183,20 +183,21 @@
 
             <div id="modal-sec2">
               <p>choose a glazing</p>  
-              <p>
-                  <span class="sm-button modal-glazing sm-active">none</span>
-                  <span class="sm-button modal-glazing">double chocolate +0.35</span>
-                  <span class="sm-button modal-glazing">sugar milk +0.25</span>
-                  <span class="sm-button modal-glazing">vanilla milk +0.25</span>
-              </p>
+              <ul>
+                  <li class="sm-button modal-glazing sm-active">none</li>
+                  <li class="sm-button modal-glazing">double chocolate +0.35</li>
+                  <li class="sm-button modal-glazing">sugar milk +0.25</li>
+                  <li class="sm-button modal-glazing">vanilla milk +0.25</li>
+              </ul>
 
-              <p>quantity
-                  <span class="sm-button unselectable" id="sm-minus">&minus;</span>
+              <ul>
+                  <li><p style="margin-top: 0px;">quantity</p></li>
+                  <li class="sm-button unselectable" id="sm-minus">&minus;</li>
                   <input type="number" class="purchase-amount-input" id="modal-purchase-amount" min="1" value="1" required>
-                  <span class="sm-button unselectable" id="sm-plus">&plus;</span>
-              </p>
+                  <li class="sm-button unselectable" id="sm-plus">&plus;</li>
+              </ul>
 
-                <button class="modal-add-button">add to cart</button>
+              <button class="modal-add-button">add to cart</button>
             </div>
 
             <div id="modal-sec3">

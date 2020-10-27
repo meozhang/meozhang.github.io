@@ -159,7 +159,7 @@ input, select{
 
 
 nav ul{
-    width: 800px;
+    width: 500px;
     margin: auto;
 }
 
@@ -410,7 +410,8 @@ li a:hover{
   }
 
   .purchase-amount-input{
-      max-width: 60px;
+      height:29px;
+      width:120px;
       text-align: center;
       margin-top: 5px;
       z-index: 1;
@@ -420,17 +421,15 @@ li a:hover{
   .sm-button{
     font-family:'Raleway', sans-serif;
     font-style: normal;
-    font-weight: bold;
-    font-size: 16px;
-    line-height: 40px;
+    font-size: 18px;
+    line-height: 20px;
     text-align: center;
     white-space: nowrap;
     
     background-color: white;
-    padding: 1px 10px 1px 10px;
+    padding: 5px 20px;
     border-radius: 20px;
     border: solid 2px #E9C467;
-    color: #E9C467;
     margin:6px;
     cursor: pointer;
 }
@@ -438,31 +437,35 @@ li a:hover{
 .sm-button:hover, .sm-active{
     background-color:#E9C467;
     opacity: 0.7;
-    color: white;
     transition: 250ms;
 }
 
 #sm-plus{
     z-index: 5;
-    margin-left: 50px;
     position: relative;
-    font-size: 20px;
+    font-size: 48px;
+    color: #E9C467;
+    margin-left: 110px;
 }
 
 #sm-minus{
     position: relative;
     z-index: 5;
+    font-size: 48px;
+    color: #E9C467;
     margin-right: -20px;
-    font-size: 20px;
 }
 
 #sm-plus:hover{
     opacity: 1;
+    color:white;
 }
 
 #sm-minus:hover{
     opacity: 1;
+    color:white;
 }
+
 
 .unselectable {
     -webkit-touch-callout: none;
