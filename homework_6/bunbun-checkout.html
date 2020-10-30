@@ -44,53 +44,41 @@
           <div id="cont-shop">
               <a href="bunbun-home.html#product_lib"> <div class="white-but" style="width:250px;"> &#8672; continue shopping</div></a>
           </div>
-            <div class= "hline" id="line-1"></div>
+          <div class= "hline" id="line-1"></div>
 
-            <!-- 1st Item -->
-            <div id="cart-1">
-                <img src="assets/product_blueberry.jpg" alt="product blueberry"/>
-                <div class="sym-close">&#10006;</div>
-                <h3>blackberry</h3>
-                <p><span class="choice">glazing</span>double chocolate +0.35<span class="sm-button">change</span></p>
-                <p>
-                  <span class="choice">quantity</span>
-                  <span class="sm-button">&minus;</span>3
-                  <span class="sm-button">&plus;</span>
-                </p>
-                
-                <h4>$4.35</h4>
-            </div>
+          <div id="cartList">
+              <!-- Empty Cart Block -->
+              <div id="emptyCart" style="display: none;">
+                <img src="assets/icon_emptyCart.png" alt="icon empty card" style="width: 60px; height:60px;"/>
+                <p>You haven't pick your buns today! A lot of yumyum buns waiting for you!</p>
+              </div>
 
-            <div class= "hline" id="line-2"></div>
-
-            <!-- 2nd Item -->
-            <div id="cart-2">
-                <img src="assets/product_original.jpg" alt="product original"/>
-                <div class="sym-close">&#10006;</div>
-                <h3>original</h3>
-                <p><span class="choice">glazing</span>none
-                  <span class="sm-button">change</span></p>
-                <p>
+              <!-- the Cart Item -->
+              <div id="cart-item" style="display: none;">
+                  <img class="product-picture" src="assets/product_blueberry.jpg" alt="product blueberry"/>
+                  <div class="delete-item" onclick="deleteItem()">&#10006;</div>
+                  <h3 class="product-name">blackberry</h3>
+                  <div>
+                    <span class="choice">glazing</span>
+                    <p class="product-glazing">
+                    double chocolate +0.35
+                    </p>
+                    <button class="sm-button">change</button>
+                  </div>
+                  <div>
                     <span class="choice">quantity</span>
-                    <span class="sm-button">&minus;</span>3
-                    <span class="sm-button">&plus;</span>
-                </p>
-                <h4>$3.50</h4>
-            </div>
+                    <span class="sm-button minus">&minus;</span>
+                    <p class="product-quant">3</p>
+                    <span class="sm-button plus">&plus;</span>
+                  </div>
+                  
+                  <h4 class="product-price">$4.35</h4>
+                  <div class= "hline" id="line-2"></div>
+              </div>
+              
+          </div>
 
-            <div class= "hline" id="line-3"></div>
-
-            <!-- SUB TOTAL -->
-            <div id="subtotal">
-                <h3>subtotal</h3>
-                <p>(delivery + tax may apply)</p>
-                <h4 id="subtotalNum">$23.55</h4>
-            </div>
-
-            <div id="checkout">
-                <a href="bunbun-deliver.html"><div class="yellow-but" style="width:250px;">checkout</div></a>
-                <p>next: pick up / delivery</p>
-            </div>
+            
 
             <!--side progress bar -->
             <div id="progress-bar">
@@ -111,8 +99,24 @@
                 <p>confirm</p>
               </div>
             </div>
-            
         </section>
+      
+        
+        <section id="checkout-total">
+            <!-- SUB TOTAL -->
+            <div id="subtotal">
+                <h3>subtotal</h3>
+                <p>(delivery + tax may apply)</p>
+                <h4 id="subtotalNum">$23.55</h4>
+            </div>
+
+            <div id="checkout">
+                <a href="bunbun-deliver.html"><div class="yellow-but" style="width:250px;">checkout</div></a>
+                <p>next: pick up / delivery</p>
+            </div>
+        </section>
+
+
 
         <section id="product_lib">
           <h2>more yummy pastries</h2>

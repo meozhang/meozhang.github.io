@@ -84,15 +84,20 @@ function updateCart(){
 }
 
 
+//CHANGE NUMBER of item in cart
+function updateItemNum(){}
+
+
 // DELETE an item when click on the cross from *cartList*
 function deleteItem(){
-    const allDeleteBtn = document.getElementsByClassName("delete-item");
-    for(i=0; i<allDeleteBtn.length; i++){
-        const currentIndex=i;
-        allDeleteBtn[currentIndex].onclick = function(){
+    var allDeleteBtn = document.getElementsByClassName("delete-item");
+    console.log(allDeleteBtn);
 
-            //delete the item from *cartList* array
-            cartList.splice([currentIndex-1],1);
+    for(i=1; i<allDeleteBtn.length; i++){
+        const currentIndex=i-1;
+
+        allDeleteBtn[i].onclick = function(){
+            cartList.splice(currentIndex,1);
             console.log(cartList);
 
             //delete the HTML div
@@ -108,3 +113,4 @@ function deleteItem(){
         }
     }    
 }
+
