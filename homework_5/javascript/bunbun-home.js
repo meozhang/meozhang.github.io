@@ -6,11 +6,12 @@ var cartList = [];
 
 // Items adding to the card
 class CartItem {
-    constructor(name, price, quantity, glazing) {
+    constructor(name, price, quantity, glazing, image) {
       this.name = name;
       this.price = price;
       this.quantity = quantity;
       this.glazing = glazing;
+      this.image = image;
     }
   }
 
@@ -28,7 +29,8 @@ function addCartItem(addBtn,amount){
     var price = addBtn.parentElement.getElementsByClassName("product-price")[0].innerText;
     var glazing = "none;"
     var quantity = amount;
-    let itemToAdd = new CartItem(name, price, quantity, glazing);
+    var image = addBtn.parentElement.getElementsByClassName("product-picture")[0].src;
+    let itemToAdd = new CartItem(name, price, quantity, glazing, image);
     cartList.push(itemToAdd);
     console.log(cartList);
 }
@@ -41,8 +43,9 @@ function addCartItem2(amount){
     var price = modal.getElementsByClassName("modal-price")[0].innerText;
     var glazing = modal.getElementsByClassName("sm-active")[0].innerText;
     var quantity = amount;
+    var image = modal.parentElement.getElementsByClassName("modal-picture")[0].src;
 
-    let itemToAdd = new CartItem(name, price, quantity, glazing);
+    let itemToAdd = new CartItem(name, price, quantity, glazing, image);
     cartList.push(itemToAdd);
     console.log(cartList);
 }
@@ -121,43 +124,6 @@ for (i = 0; i < allProduct.length; i++) {
 
     }
 }
-
-//Button display "added" onclick
-function displayAdded(button) {
-    button.innerHTML="add to cart";
-}
-//Update Number of Items in Cart
-function updateCartValue(amount){
-    totalCartNum += amount;
-    console.log(totalCartNum);
-    document.getElementById("cart-num").innerHTML = totalCartNum;
-}
-
-//HOME page: create a new CartItem object when click on add to cart
-function addCartItem(addBtn,amount){
-    var name = addBtn.parentElement.getElementsByClassName("product-title")[0].innerText;
-    var price = addBtn.parentElement.getElementsByClassName("product-price")[0].innerText;
-    var glazing = "none;"
-    var quantity = amount;
-    let itemToAdd = new CartItem(name, price, quantity, glazing);
-    cartList.push(itemToAdd);
-    console.log(cartList);
-}
-
-//MODAL page: create a new CartItem object
-function addCartItem2(amount){
-    var modal = document.getElementsByClassName("modal-content")[0]
-
-    var name = modal.getElementsByClassName("modal-title")[0].innerText;
-    var price = modal.getElementsByClassName("modal-price")[0].innerText;
-    var glazing = modal.getElementsByClassName("sm-active")[0].innerText;
-    var quantity = amount;
-
-    let itemToAdd = new CartItem(name, price, quantity, glazing);
-    cartList.push(itemToAdd);
-    console.log(cartList);
-}
-
 
 
 // PRODUCT DETAIL: UPDATE THE MODAL
