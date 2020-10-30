@@ -308,7 +308,7 @@ li a:hover{
 
 .product-block p{
     display: block;
-    margin: 12px 0px 12px 0 px;
+    margin: 12px 0px;
 }
 
 .product-block ul{
@@ -410,10 +410,10 @@ li a:hover{
   }
 
   .purchase-amount-input{
-      height:29px;
+      height:28px;
       width:120px;
       text-align: center;
-      margin-top: 5px;
+      margin-top: -34px;
       z-index: 1;
       position: absolute;
   }
