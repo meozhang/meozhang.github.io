@@ -12,6 +12,7 @@ class CartItem {
       this.quantity = quantity;
       this.glazing = glazing;
       this.image = image;
+      this.key = name + "/" + glazing;
     }
   }
 
@@ -27,7 +28,7 @@ function updateCartValue(amount){
 function addCartItem(addBtn,amount){
     var name = addBtn.parentElement.getElementsByClassName("product-title")[0].innerText;
     var price = addBtn.parentElement.getElementsByClassName("product-price")[0].innerText;
-    var glazing = "none;"
+    var glazing = "none";
     var quantity = amount;
     var image = addBtn.parentElement.getElementsByClassName("product-picture")[0].src;
     let itemToAdd = new CartItem(name, price, quantity, glazing, image);
@@ -80,10 +81,8 @@ var allProduct= document.getElementsByClassName("product-block");
 for (i = 0; i < allProduct.length; i++) {
     //get the number choices in a list
     var orderNumChoice = allProduct[i].getElementsByClassName("order-num");
-    console.log(orderNumChoice);
 
     for(j = 0; j < orderNumChoice.length; j++){
-        console.log(orderNumChoice[j]);
         orderNumChoice[j].onclick = function(){
 
             //make all other numbers inactive

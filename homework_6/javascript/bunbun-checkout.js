@@ -15,7 +15,13 @@ function onLoad(){
 
     updateCart();
 
+    calTotalCartNum();
+    calculateSubtotal();
+    emptyCartBlock();
+
     deleteItem();
+
+    
 }
 
 
@@ -46,6 +52,16 @@ function calTotalCartNum(){
     document.getElementById("cart-num").innerHTML = totalCartNum;
 }
 
+
+//show Empty Cart block
+function emptyCartBlock(){
+    const emptyCart = document.getElementById("emptyCart");
+    if(totalCartNum === 0){
+        emptyCart.style.display = "block";
+    } else {
+        emptyCart.style.display = "none";
+    }
+}
 
 //Update Local Storage
 function setLocalStr(){
@@ -94,10 +110,14 @@ function deleteItem(){
     console.log(allDeleteBtn);
 
     for(i=1; i<allDeleteBtn.length; i++){
-        const currentIndex=i-1;
 
         allDeleteBtn[i].onclick = function(){
-            cartList.splice(currentIndex,1);
+            const name = this.parentElement.getElementsByClassName("product-name")[0].innerHTML;
+            const glazing = this.parentElement.getElementsByClassName("product-glazing")[0].innerHTML;
+            const key = name + "/" + glazing;
+
+            const indexToDelete = cartList.findIndex(item => item.key === key);
+            cartList.splice(indexToDelete, 1);
             console.log(cartList);
 
             //delete the HTML div
@@ -110,6 +130,8 @@ function deleteItem(){
             calculateSubtotal();
 
             setLocalStr();
+
+            emptyCartBlock();
         }
     }    
 }

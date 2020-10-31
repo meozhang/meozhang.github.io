@@ -233,9 +233,18 @@ li a:hover{
     margin-top: 18px;
 }
 
+#emptyCart{
+    padding: 30px 80px;
+}
+
+
 #emptyCart img{
     width: 60px;
     height:60px;
+}
+
+#emptyCart p{
+    display: inline;
 }
 
 
