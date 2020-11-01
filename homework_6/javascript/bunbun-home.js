@@ -3,6 +3,13 @@
 var totalCartNum = 0;
 var cartList = [];
 
+//get local storage 
+function onload(){
+    cartList = JSON.parse(localStorage.getItem ("cartList"));
+    totalCartNum = JSON.parse(localStorage.getItem ("totalCartNum"))
+    console.log(totalCartNum, cartList);
+    document.getElementById("cart-num").innerHTML = totalCartNum;
+}
 
 // Items adding to the card
 class CartItem {

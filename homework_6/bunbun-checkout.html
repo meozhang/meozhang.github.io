@@ -50,7 +50,7 @@
               <!-- Empty Cart Block -->
               <div id="emptyCart" style="display: none;">
                 <img src="assets/icon_emptyCart.png" alt="icon empty card" style="width: 60px; height:60px;"/>
-                <p>You haven't pick your buns today! A lot of yumyum buns waiting for you!</p>
+                <p>You haven't picked your buns yet! A lot of yumyum buns waiting for you!</p>
               </div>
 
               <!-- the Cart Item -->
@@ -63,13 +63,13 @@
                     <p class="product-glazing">
                     double chocolate +0.35
                     </p>
-                    <button class="sm-button">change</button>
+                    <button class="sm-button" onclick="openGlazingModal(this)">change</button>
                   </div>
                   <div>
                     <span class="choice">quantity</span>
-                    <span class="sm-button minus">&minus;</span>
+                    <span class="sm-button minus" onclick="quantMinus(this)">&minus;</span>
                     <p class="product-quant">3</p>
-                    <span class="sm-button plus">&plus;</span>
+                    <span class="sm-button plus" onclick="quantPlus(this)">&plus;</span>
                   </div>
                   
                   <h4 class="product-price">$4.35</h4>
@@ -168,6 +168,23 @@
               <div class="yellow-but">add to cart</div>
           </div>
         </section>
+
+        <!-- The Modal -->
+        <div id="modal" class="modal-bg">
+
+          <!-- Modal content -->
+          <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2 class="modal-title" style = "text-align: left;">pumpkin spice</h2>
+            <p>choose a glazing</p>  
+            <ul>
+                <li class="sm-button modal-glazing" onclick="changeGlazing(this)">none</li>
+                <li class="sm-button modal-glazing" onclick="changeGlazing(this)">double chocolate +0.35</li>
+                <li class="sm-button modal-glazing" onclick="changeGlazing(this)">sugar milk +0.25</li>
+                <li class="sm-button modal-glazing" onclick="changeGlazing(this)">vanilla milk +0.25</li>
+            </ul>
+          </div>
+        </div>
 
         <script src="./javascript/bunbun-checkout.js"></script>
       </main>

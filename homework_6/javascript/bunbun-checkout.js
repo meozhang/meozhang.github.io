@@ -20,8 +20,6 @@ function onLoad(){
     emptyCartBlock();
 
     deleteItem();
-
-    
 }
 
 
@@ -70,10 +68,11 @@ function setLocalStr(){
 }
 
 
-
 //retrieve the GENERIC cart-item + Update the Content
 const cartItem = document.getElementById("cart-item");
-function updateCart(){    
+function updateCart(){
+    //clean the HTML cart list
+        
     for(i=0; i<cartList.length; i++){
         product = cartList[i];
 
@@ -98,10 +97,6 @@ function updateCart(){
         document.getElementById("cartList").appendChild(newCartItem);
     }
 }
-
-
-//CHANGE NUMBER of item in cart
-function updateItemNum(){}
 
 
 // DELETE an item when click on the cross from *cartList*
@@ -134,5 +129,147 @@ function deleteItem(){
             emptyCartBlock();
         }
     }    
+}
+
+//CHANGE NUMBER of item in cart
+// MINUS - - - 
+function quantMinus(event){
+    var minus = event;
+    currentNum = parseInt(minus.parentElement.getElementsByClassName("product-quant")[0].innerHTML);
+    
+    const name = minus.parentElement.parentElement.getElementsByClassName("product-name")[0].innerHTML;
+    const glazing = minus.parentElement.parentElement.getElementsByClassName("product-glazing")[0].innerHTML;
+    const key = name + "/" + glazing;
+
+    const indexToChange = cartList.findIndex(item => item.key === key);
+    if (currentNum >= 2){
+        currentNum -=1 ;
+        minus.parentElement.getElementsByClassName("product-quant")[0].innerHTML = currentNum;
+
+        //update the number in *cartList*
+        cartList[indexToChange].quantity = currentNum;
+        console.log(cartList);
+
+    }  else {
+        currentNum = 0;
+        minus.parentElement.parentElement.remove();
+
+        //update the number in *cartList*
+        cartList.splice(indexToChange, 1);
+        console.log(cartList);
+    }
+    //Update the *totalCartNUm*
+    calTotalCartNum();
+
+    //Update the *subtotal*
+    calculateSubtotal();
+
+    setLocalStr();
+
+    emptyCartBlock();
+}
+
+// PLUS + + +
+function quantPlus(event){
+    var plus = event;
+    currentNum = parseInt(plus.parentElement.getElementsByClassName("product-quant")[0].innerHTML);
+    
+    const name = plus.parentElement.parentElement.getElementsByClassName("product-name")[0].innerHTML;
+    const glazing = plus.parentElement.parentElement.getElementsByClassName("product-glazing")[0].innerHTML;
+    const key = name + "/" + glazing;
+
+    const indexToChange = cartList.findIndex(item => item.key === key);
+    if (currentNum >= 1){
+        currentNum +=1 ;
+        plus.parentElement.getElementsByClassName("product-quant")[0].innerHTML = currentNum;
+
+        //update the number in *cartList*
+        cartList[indexToChange].quantity = currentNum;
+        console.log(cartList);
+    }
+    //Update the *totalCartNUm*
+    calTotalCartNum();
+
+    //Update the *subtotal*
+    calculateSubtotal();
+
+    setLocalStr();
+}
+
+
+// Change glazing for product -- MODAL
+
+// Get the modal
+var modal = document.getElementById("modal");
+// Get the <span> element that closes the modal
+var modalClose = document.getElementsByClassName("close")[0];
+
+
+function openGlazingModal(event){
+    var changeBtn = event;
+    modal.style.display = "block";
+
+    //update the name of the product
+    var name = changeBtn.parentElement.parentElement.getElementsByClassName("product-name")[0].innerHTML;
+    modal.getElementsByClassName("modal-title")[0].innerHTML = name;
+    
+    var currentGlazing = changeBtn.parentElement.getElementsByClassName("product-glazing")[0].innerHTML;
+    
+    const allModalGlazingButtons = document.getElementsByClassName("modal-glazing");
+
+    //make the current chosen glazing "active"
+    for (i = 0; i < allModalGlazingButtons.length; i++) {
+        if(allModalGlazingButtons[i].innerHTML === currentGlazing){
+            allModalGlazingButtons[i].className += " sm-active";
+        }
+    }
+}
+
+
+function changeGlazing(event){
+    var glazingBtn = event;
+    var currentActive = modal.getElementsByClassName("sm-active");
+
+    var oldGlazing = currentActive[0].innerHTML;
+    var name = modal.getElementsByClassName("modal-title")[0].innerHTML;
+    var key = name + "/" + oldGlazing;
+
+    //make all other numbers inactive
+    currentActive[0].className = currentActive[0].className.replace(" sm-active", "");
+
+    //make the clicked number active
+    glazingBtn.className += " sm-active";
+
+    //update the cart item display HTML
+    var allProducts = document.getElementsByClassName 
+    
+    //update the cartList
+    var newGlazing = glazingBtn.innerHTML;
+    const indexToChange = cartList.findIndex(item => item.key === key);
+    cartList[indexToChange].glazing = newGlazing;
+
+    //close the modal
+    setTimeout(revertModal, 1000);
+}
+
+
+// When the user clicks on <span> (x), close the modal
+modalClose.onclick = function() {
+    revertModal();
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        revertModal();
+    }
+}
+// CLOSE the modal and clean all the glazing selection
+function revertModal() {
+    modal.style.display = "none";
+    var currentActive = modal.getElementsByClassName("sm-active");
+        for(j = 0; j<currentActive.length; j++){
+            currentActive[j].className = currentActive[0].className.replace(" sm-active", "");
+            }  
 }
 
