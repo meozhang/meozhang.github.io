@@ -21,7 +21,7 @@ class CartItem {
       this.image = image;
       this.key = name + "/" + glazing;
     }
-  }
+}
 
 
 //Update Number of Items in Cart
@@ -39,7 +39,14 @@ function addCartItem(addBtn,amount){
     var quantity = amount;
     var image = addBtn.parentElement.getElementsByClassName("product-picture")[0].src;
     let itemToAdd = new CartItem(name, price, quantity, glazing, image);
-    cartList.push(itemToAdd);
+    
+    const existingItemIndex = cartList.findIndex(item => item.key === itemToAdd.key);
+    if (existingItemIndex >= 0){
+        cartList[existingItemIndex].quantity += itemToAdd.quantity;
+    }  else {
+        cartList.push(itemToAdd);
+    } 
+    
     console.log(cartList);
 }
 
@@ -54,7 +61,14 @@ function addCartItem2(amount){
     var image = modal.parentElement.getElementsByClassName("modal-picture")[0].src;
 
     let itemToAdd = new CartItem(name, price, quantity, glazing, image);
-    cartList.push(itemToAdd);
+
+    const existingItemIndex = cartList.findIndex(item => item.key === itemToAdd.key);
+    if (existingItemIndex >= 0){
+        cartList[existingItemIndex].quantity += itemToAdd.quantity;
+    }  else {
+        cartList.push(itemToAdd);
+    } 
+
     console.log(cartList);
 }
 
