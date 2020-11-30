@@ -1,0 +1,204 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>meo - arch</title>
+
+        <!--GOOGLE FONTS-->
+        <link href="https://fonts.googleapis.com/css2?family=Rasa:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+        <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;600&display=swap" rel="stylesheet">
+
+        <link rel="icon" type="image/png" href="asset/favicon.png">
+
+        <!--library -->
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+        
+        <!--greensock animation-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js" integrity="sha512-IQLehpLoVS4fNzl7IfH8Iowfm5+RiMGtHykgZJl9AWMgqx0AmJ6cRWcB+GaGVtIsnC4voMfm8f2vwtY+6oPjpQ==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/ScrollTrigger.min.js" integrity="sha512-wK2NuxEyN/6s53M8G7c6cRUXvkeV8Uh5duYS06pAdLq4ukc72errSIyyGQGYtzWEzvVGzGSWg8l79e0VkTJYPw==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
+        
+        <!-- css -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" href="./style/arch_home_style.css">
+    </head>
+
+    <body>
+        <!--CURSOR -->
+        <div class="cursor"></div>
+        <svg id = "cursor-readmore" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 180"><defs><style>.cls-1{fill:#9db290;opacity:0.6;}.cls-2{font-size:18px;fill:#fff;font-family:PalatinoLinotype-Bold, Palatino Linotype;font-weight:700;}</style></defs><g id="bg_circle"><circle class="cls-1" cx="90" cy="90" r="90"/></g><g id="cursor_text"><text class="cls-2" transform="translate(59.69 28.77) rotate(-20.95)">R</text><text class="cls-2" transform="matrix(0.99, -0.17, 0.17, 0.99, 73.21, 23.86)">E</text><text class="cls-2" transform="translate(85.52 21.79) rotate(2.09)">A</text><text class="cls-2" transform="translate(101 22.47) rotate(15.5)">D</text><text class="cls-2" transform="matrix(0.89, 0.45, -0.45, 0.89, 116.76, 27.31)">_</text><text class="cls-2" transform="translate(126.31 31.8) rotate(39.53)">M</text><text class="cls-2" transform="matrix(0.58, 0.81, -0.81, 0.58, 141.04, 44.45)">O</text><text class="cls-2" transform="translate(150.38 58.03) rotate(67.47)">R</text><text class="cls-2" transform="translate(155.66 71.41) rotate(78.84)">E</text><text class="cls-2" transform="matrix(0.03, 1, -1, 0.03, 157.86, 83.75)">_</text><text class="cls-2" transform="translate(158.17 94.35) rotate(98.98)">R</text><text class="cls-2" transform="translate(155.67 108.54) rotate(110.35)">E</text><text class="cls-2" transform="translate(151.33 120.23) rotate(122.17)">A</text><text class="cls-2" transform="matrix(-0.71, 0.7, -0.7, -0.71, 142.99, 133.27)">D</text><text class="cls-2" transform="matrix(-0.84, 0.55, -0.55, -0.84, 130.91, 144.51)">_</text><text class="cls-2" transform="translate(122.25 150.56) rotate(159.49)">M</text><text class="cls-2" transform="translate(103.96 156.99) rotate(174.59)">O</text><text class="cls-2" transform="translate(87.52 158.26) rotate(-172.6)">R</text><text class="cls-2" transform="translate(73.28 156.16) rotate(-161.24)">E</text><text class="cls-2" transform="translate(61.49 151.92) rotate(-151.44)">_</text><text class="cls-2" transform="translate(52.17 146.88) rotate(-140.94)">R</text><text class="cls-2" transform="translate(41.14 137.61) rotate(-129.7)">E</text><text class="cls-2" transform="translate(33.17 128.01) rotate(-117.95)">A</text><text class="cls-2" transform="translate(26.02 114.29) rotate(-104.47)">D</text><text class="cls-2" transform="translate(22.34 98.21) rotate(-93.08)">_</text><text class="cls-2" transform="matrix(0.16, -0.99, 0.99, 0.16, 21.45, 87.68)">M</text><text class="cls-2" transform="matrix(0.42, -0.91, 0.91, 0.42, 25, 68.6)">O</text><text class="cls-2" transform="translate(32.11 53.74) rotate(-52.5)">R</text><text class="cls-2" transform="matrix(0.75, -0.66, 0.66, 0.75, 41.07, 42.46)">E</text><text class="cls-2" transform="translate(50.64 34.36) rotate(-31.54)">_</text></g></svg>
+        
+        <!--JAVASCRIPT-->
+        <script src="script/script.js"></script>
+
+       
+        <!--Navigation-->
+        <nav class="navbar navbar-expand-md navbar-light bg-white">
+            <a class="nav-link active d-flex flex-row" href="arch_home.html" style="margin-top: 15px;">
+                <div class = "green-dot"></div>
+                <p id = "logo-text">arch</p>
+            </a>
+            <!--the hamburger-->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse text-center" id="navbarTogglerDemo02">
+                <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="mailto:meozhang@gmail.com">meozhang@gmail.com</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="arch_about.html">about</a>
+                    </li>
+                </ul>
+                <ul class="nav navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            architecture
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right text-center" aria-labelledby="navbarDropdownMenuLink">
+                        <a class="dropdown-item" href="arch_project1.html">mega-transportation</a>
+                        <a class="dropdown-item" href="arch_project2.html">the swing</a>
+                        <a class="dropdown-item" href="arch_project3.html">la siarrita</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <!--project 1-->
+        <section id= "project-1" class="container-fluid home-project">
+            <div class="row">
+                <div class="col-12 col-md-7">
+                    <a href="arch_project1.html">
+                        <img class="img-fluid img-zoom" alt="Responsive image" src="asset/p1_0title.png" alt="title image: project mega-transportation" />
+                    </a>
+                </div>
+                <div class="col-2 col-md-1"></div>
+                <div class="col-10 col-md-4 p-4">
+                    <div class="d-flex align-items-center mt-12">
+                        <h1 id= "project1-h1" style="opacity:0;">01</h1>
+                        <div id = "project1-graph" class = "d-flex align-items-center" style="opacity: 0;">
+                            <div class = "green-line"></div>
+                            <div class = "green-dot-sm"></div>
+                        </div>
+                    </div>
+                    <h2>MEGA-TRANSPORT<br>
+                        ARCHIDAM: COACHELLA<br>
+                        VALLEY RESEARCH</h2>
+                    <p>Instructor Derek Hoeferlin<br>
+                        Spring 2017
+                    </p>
+                </div>    
+            </div>
+
+            <!--Decorative Green Circle-->
+            <div id = "green-circle-1"></div>
+        </section>
+
+        <!--project 2-->
+        <section id= "project-2" class = "container-fluid home-project">
+            <div class="row">
+
+                <div id= "pro2-image" class = "col-12 col-md-7">
+                    <a href="arch_project2.html">
+                        <img class="img-fluid img-zoom" alt="Responsive image" src="asset/p2_0title.png" alt="title image: project the swing" />
+                    </a>
+                </div>
+
+                <div class="col-2 col-md-1"></div>
+                <div id = "pro2-title" class="col-10 col-md-4 p-4">
+                    <div class="d-flex align-items-center mt-12">
+                        <div id = "project2-graph" class = "d-flex align-items-center" style="opacity: 0;">
+                            <div class = "green-dot-sm"></div>
+                            <div class = "green-line"></div>
+                        </div>
+                        <h1 id= "project2-h1" style="opacity:0;">02</h1>
+                    </div>    
+                    <h2>THE SWING<br>
+                        RESIDENCE ON THE BRIDGE</h2>
+                    
+                    <p>Instructor Jaymon Diaz<br>
+                        Fall 2015
+                    </p>
+                </div>
+            </div>
+
+            <!--Decorative Green Circle-->
+            <div id = "green-circle-2"></div>
+        </section>
+
+        <!--project 3-->
+        <section id= "project-3" class="container-fluid home-project">
+            <div class="row">
+                <div class="col-12 col-md-7">
+                    <a href="arch_project3.html">
+                        <img class="img-fluid img-zoom" alt="Responsive image" src="asset/p3_0title.png" alt="title image: project la sierrita" />
+                    </a>
+                </div>
+                <div class="col-2 col-md-1"></div>
+                <div class="col-10 col-md-4 m-8 p-4">
+                    <div class="d-flex align-items-center mt-12">
+                        <h1 id= "project3-h1" style= "opacity:0;">03</h1>
+                        <div id = "project3-graph" class = "d-flex align-items-center" style="opacity: 0;">
+                            <div class = "green-line"></div>
+                            <div class = "green-dot-sm"></div>
+                        </div>
+                    </div>
+                    <h2>LA SIERRITA<br>
+                        RESIDENCE
+                    </h2>
+                    <p>Lake|Flato Architects<br>
+                        2018-2020
+                    </p>
+                </div>    
+            </div>
+            <!--Decorative Green Circle-->
+            <div id = "green-circle-3"></div>
+        </section>
+
+        <!--go back to the top-->
+        <section class="container-fluid">
+            <img src=''>
+        </section>
+
+        <!--Footer-->
+        <footer class="navbar navbar-expand-md navbar-light bg-white">
+            <a class="nav-link active" id="footer-green-dot" href="arch_home.html">
+                <div class = "green-dot"></div>
+            </a>
+
+            <div class="collapse navbar-collapse text-center" id="navbarNav">
+                <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="mailto:meozhang@gmail.com">meozhang@gmail.com</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">about</a>
+                    </li>
+                </ul>
+                <ul class="nav navbar-nav ml-auto">
+                    <li class="nav-item dropup">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            architecture
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right text-center" aria-labelledby="navbarDropdownMenuLink">
+                        <a class="dropdown-item" href="arch_project1.html">mega-transportation</a>
+                        <a class="dropdown-item" href="arch_project2.html">the swing</a>
+                        <a class="dropdown-item" href="arch_project3.html">la siarrita</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </footer>
+        <div style="width:100%; height:80px; background-color: #9db290;"></div>
+    
+    </body>
+</html>

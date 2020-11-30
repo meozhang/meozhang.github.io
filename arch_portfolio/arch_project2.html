@@ -1,0 +1,227 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>meo - arch</title>
+
+        <!--GOOGLE FONTS-->
+        <link href="https://fonts.googleapis.com/css2?family=Rasa:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+        <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;600&display=swap" rel="stylesheet">
+
+        <link rel="icon" type="image/png" href="asset/favicon.png">
+
+        <!--library -->
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+        
+        <!--greensock animation-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js" integrity="sha512-IQLehpLoVS4fNzl7IfH8Iowfm5+RiMGtHykgZJl9AWMgqx0AmJ6cRWcB+GaGVtIsnC4voMfm8f2vwtY+6oPjpQ==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/ScrollTrigger.min.js" integrity="sha512-wK2NuxEyN/6s53M8G7c6cRUXvkeV8Uh5duYS06pAdLq4ukc72errSIyyGQGYtzWEzvVGzGSWg8l79e0VkTJYPw==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
+        
+        <!-- css -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" href="./style/arch_home_style.css">
+    </head>
+
+    <body>
+        <!--CURSOR -->
+        <div class="cursor"></div>
+        <!--JAVASCRIPT-->
+        <script src="script/script.js"></script>
+
+
+        <!--Navigation-->
+        <nav class="navbar navbar-expand-md navbar-light bg-white">
+            <a class="nav-link active d-flex flex-row" href="arch_home.html" style="margin-top: 15px;">
+                <div class = "green-dot"></div>
+                <p id = "logo-text">arch</p>
+            </a>
+            <!--the hamburger-->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse text-center" id="navbarTogglerDemo02">
+                <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="mailto:meozhang@gmail.com">meozhang@gmail.com</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="arch_about.html">about</a>
+                    </li>
+                </ul>
+                <ul class="nav navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            architecture
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right text-center" aria-labelledby="navbarDropdownMenuLink">
+                        <a class="dropdown-item" href="arch_project1.html">mega-transportation</a>
+                        <a class="dropdown-item" href="arch_project2.html">the swing</a>
+                        <a class="dropdown-item" href="arch_project3.html">la siarrita</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        
+        
+        <section class="container-fluid">
+
+            <!--Title Block-->
+            <div class="row">
+                <!--Title image carousel-->
+                <div class="col-12 col-md-7">
+                    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                        <ol class="carousel-indicators">
+                          <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                          <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                          <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                        </ol>
+                        <div class="carousel-inner">
+                          <div class="carousel-item active">
+                            <img class="d-block w-100" src="asset/p2_0title.png" alt="title image: project the swing">
+                          </div>
+                          <div class="carousel-item">
+                            <img class="d-block w-100" src="asset/p2_0title.png" alt="title image: project the swing">
+                          </div>
+                          <div class="carousel-item">
+                            <img class="d-block w-100" src="asset/p2_0title.png" alt="title image: project the swing">
+                          </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-2 col-md-1"></div>
+
+                <!--Title Title Title-->
+                <div class="col-10 col-md-4 p-4">
+                    <div id="project1-h1" class="mt-12">
+                        <h1>THE SWING</h1>
+                        <h2>RESIDENCE<br> 
+                            ON THE BRIDGE</h2>
+                    </div>
+                    
+                    <div id = "project1-graph" class = "d-flex align-items-center ml-12 mt-6" style="opacity: 0;">
+                        <div class = "green-line-long"></div>
+                        <div class = "green-dot-sm"></div>
+                    </div>
+                    <p id="project3-h1" class = "mt-4">Instructor Jaymon Diaz<br>
+                        Fall 2015
+                    </p>
+                </div>
+
+                <!--Decorative Green Circle-->
+                <div id = "green-circle-4"></div>      
+            </div>
+
+            <!--Text Block-->
+            <div class= "row slide-in">
+                <div class="col-1 col-md-2"></div>
+                <div class="col-10 col-md-6">
+                    <h3>introduction</h3>
+                    <p>The Swing is designed for resident scientists, accommodating dwelling units, laboratories, meeting rooms.</p>
+                    <p>Each of the five dwelling units provides a minimal but comfortable personal space for occupants. With emphasis on the visual and physical experience, the swinging motion can be initated by natrual wind, and engage foggy condition above Mississippi River.</p>
+                    <p>The laboratory and meeting space are on the other side of the bridge, completely seperated from the residential areas. Constructions on both sides are supported by a steel megastructure attached to the Chain on Rocks Bridge. The size of the entire project, comparing to that of the bridge, forms a magnificent scene.</p> 
+                    <br><br>
+                    <h3>site analysis</h3>
+                    <p>Around the river bank, mostly Fog is most likely formed above water, especially at the river edge. Through the prevailing wind study, the site is located at the Illinois side of Chain of Rocks Bridge where there is a bigger slope that help intensify fog formation.</p>
+                </div>
+                <div class="col-1 col-md-4"></div>
+            </div>
+
+            <!-- image -->
+            <div class = "row slide-in">
+                <div class="col-md-2"></div>
+                <div class="col-12 col-md-10 d-flex align-items-center justify-content-between">
+                    <img class="img-fluid img-zoom" src="asset/p2_1site.jpg" alt="project 2 site analysis" data-toggle="modal" data-bigimage="asset/p2_1site.jpg" data-target="#myModal"/>
+                </div>
+            </div>
+
+            <!--Text Block-->
+            <div class= "row slide-in">
+                <div class="col-1 col-md-4"></div>
+                <div class="col-10 col-md-6">
+                    <h3>swinging and dwelling
+                        </h3>
+                    <p>Swing is a magical movement that creates a visual illusion in people’s mind: images gets overlayed and fuzzy and eventually disappeared. When dry ice and water are put into the box, fog is formed; pressing the key initiates the swing movement.</p>
+                    <p>Multiple dwelling units can be hang from the superstructure, with each following one slightly higher than the previous one, and farther away from the bridge. The interesting balance of safety and excitement is experimented, providing occupants with different options of living experience. The two-story dwelling space can be kept private, while the decking space as the part of the circulation is for public access.</p>
+                </div>
+                <div class="col-1 col-md-2"></div>
+            </div>
+
+            <!-- image -->
+            <div class = "row slide-in">
+                <div class="col-12 col-md-10 d-flex align-items-center justify-content-between">
+                    <img class="img-fluid img-zoom" src="asset/p2_2dwell.jpg" alt="project 2 photo of dwelling units" data-toggle="modal" data-bigimage="asset/p2_2dwell.jpg" data-target="#myModal"/>
+                </div>
+                <div class="col-md-2"></div>
+            </div>
+
+            <!--Text Block + Image-->
+            <div class= "row slide-in">
+                <div class="col-1 col-md-2"></div>
+                <div class="col-10 col-md-2 d-flex align-items-center">
+                    <p>The dwelling box is attached to a huge vertical pendulum, that can generate swinging movement with wind force. Two pivot points enable the unit itself to always maintain unskewed (prependicular to the ground). The dwelling unit is designated to for meditating or relaxing purpose, with french windows providing natural light.</p>
+                </div>
+                <div class="col-2 col-md-2"></div>
+                <div class="col-8 col-md-6 d-flex align-items-center justify-content-between">
+                    <img class="img-fluid img-zoom" src="asset/p2_3bridge.jpg" alt="project 2 view to the bridge" style="margin-top:50px;" data-toggle="modal" data-bigimage="asset/p2_3bridge.jpg" data-target="#myModal"/>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- The Image Lightbox-->
+        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>        
+                        <img src="asset/p1_0title.png" alt="" id="modal-image" class="img-fluid">
+                    </div>
+                </div>
+            </div>
+        </div> 
+        
+        <!--Footer-->
+        <footer class="navbar navbar-expand-md navbar-light bg-white">
+            <a class="nav-link active" id="footer-green-dot" href="arch_home.html">
+                <div class = "green-dot"></div>
+            </a>
+
+            <div class="collapse navbar-collapse text-center" id="navbarNav">
+                <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="mailto:meozhang@gmail.com">meozhang@gmail.com</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">about</a>
+                    </li>
+                </ul>
+                <ul class="nav navbar-nav ml-auto">
+                    <li class="nav-item dropup">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            architecture
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right text-center" aria-labelledby="navbarDropdownMenuLink">
+                        <a class="dropdown-item" href="arch_project1.html">mega-transportation</a>
+                        <a class="dropdown-item" href="arch_project2.html">the swing</a>
+                        <a class="dropdown-item" href="arch_project3.html">la siarrita</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </footer>
+        <div style="width:100%; height:80px; background-color: #9db290;"></div>
+
+
+    </body>
+</html>

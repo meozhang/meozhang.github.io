@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>meo - arch</title>
+
+        <!--GOOGLE FONTS-->
+        <link href="https://fonts.googleapis.com/css2?family=Rasa:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+        <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;600&display=swap" rel="stylesheet">
+
+        <link rel="icon" type="image/png" href="asset/favicon.png">
+
+        <!--library -->
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+        
+        <!--greensock animation-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js" integrity="sha512-IQLehpLoVS4fNzl7IfH8Iowfm5+RiMGtHykgZJl9AWMgqx0AmJ6cRWcB+GaGVtIsnC4voMfm8f2vwtY+6oPjpQ==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/ScrollTrigger.min.js" integrity="sha512-wK2NuxEyN/6s53M8G7c6cRUXvkeV8Uh5duYS06pAdLq4ukc72errSIyyGQGYtzWEzvVGzGSWg8l79e0VkTJYPw==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
+        
+        <!-- css -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" href="./style/arch_home_style.css">
+    </head>
+
+    <body>
+        <!--CURSOR -->
+        <div class="cursor"></div>
+        <!--JAVASCRIPT-->
+        <script src="script/script.js"></script>
+
+
+        <!--Navigation-->
+        <nav class="navbar navbar-expand-md navbar-light bg-white">
+            <a class="nav-link active d-flex flex-row" href="arch_home.html" style="margin-top: 15px;">
+                <div class = "green-dot"></div>
+                <p id = "logo-text">arch</p>
+            </a>
+            <!--the hamburger-->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse text-center" id="navbarTogglerDemo02">
+                <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="mailto:meozhang@gmail.com">meozhang@gmail.com</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="arch_about.html">about</a>
+                    </li>
+                </ul>
+                <ul class="nav navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            architecture
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right text-center" aria-labelledby="navbarDropdownMenuLink">
+                        <a class="dropdown-item" href="arch_project1.html">mega-transportation</a>
+                        <a class="dropdown-item" href="arch_project2.html">the swing</a>
+                        <a class="dropdown-item" href="arch_project3.html">la siarrita</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        
+        
+        <section class="container-fluid">
+
+            <!--Title Block-->
+            <div class="row">
+                <!--Profie Picture-->
+                <div class="col-3 col-lg-2"></div>
+                <div class="col-6 col-lg-3">
+                    <img class="img-fluid" src="asset/about_photo.png" alt="about me photo" />
+                </div>
+                <div class="col-3 col-lg-2"></div>
+
+                <!--Title Title Title-->
+                <div class="col-10 col-lg-5 pt-4" id="about-title">
+                    <div id="project1-h1" class="mt-12">
+                        <h1>MEO<br>
+                            ZHANG</h1>
+                    </div>
+                    
+                    <div id = "project1-graph" class = "d-flex align-items-center ml-12 mt-4" style="opacity: 0;">
+                        <div class = "green-line-long"></div>
+                        <div class = "green-dot-sm"></div>
+                    </div>
+                    <div id="project3-h1" class=>
+                        <h2 class="mt-4">former architect<br>
+                            aspiring ux designer</h2>
+                        <p class = "mt-4">Carnegie Mellon University<br>
+                            Master of Human Computer Interaction<br>
+                            Graduating 2021 
+                        </p>
+                        <p class="mt-12" style="width: 50%;">I am an adventurer, expanding the dimension of design from structures and materiality to empathetic human interaction. Coming from an architecture background, I'm well equipped with skills to manage design complexity, the sensibility for appealing visual designs, and the passion for human centered philosophy. I am avidly learning, aiming to create digital products that are engaging and impactful.</p>
+                        
+                    </div>
+                </div>  
+            </div>
+            
+            <!--Decorative Green Circle-->  
+            <div id = "green-circle-4"></div>  
+
+            <!--my strength-->
+            <div class="row">
+                <div class="col-1 col-lg-2"></div>
+                <div class="col-10 col-lg-3 slide-in">
+                    <div>
+                        <h3>user advocate</h3>
+                        <p>start with creativity and end with empathy. I minimize a designer’s ego, and value user satisfaction as the core of any design decisions. 
+                        </p>
+                        <br><br>
+                        <h3>avid learner</h3>
+                        <p>I love to design with a multidisciplinary mind and look for multidimensional solutions. With my curiosity, I never stopped learning, through reading, listening and collaborating. 
+                        </p> 
+                        <br><br>
+                        <h3>proative thinker</h3>
+                        <p>own my project and stay ahead of the game. I enjoy analytical problem solving, to design for the present and the future.</p>
+                    </div>
+                </div>
+                <div class="col-1 col-lg-7"></div>
+            </div>
+
+        </section>
+        
+        <!--Footer-->
+        <footer class="navbar navbar-expand-md navbar-light bg-white">
+            <a class="nav-link active" id="footer-green-dot" href="arch_home.html">
+                <div class = "green-dot"></div>
+            </a>
+
+            <div class="collapse navbar-collapse text-center" id="navbarNav">
+                <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="mailto:meozhang@gmail.com">meozhang@gmail.com</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">about</a>
+                    </li>
+                </ul>
+                <ul class="nav navbar-nav ml-auto">
+                    <li class="nav-item dropup">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            architecture
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right text-center" aria-labelledby="navbarDropdownMenuLink">
+                        <a class="dropdown-item" href="arch_project1.html">mega-transportation</a>
+                        <a class="dropdown-item" href="arch_project2.html">the swing</a>
+                        <a class="dropdown-item" href="arch_project3.html">la siarrita</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </footer>
+        <div style="width:100%; height:80px; background-color: #9db290;"></div>
+
+
+    </body>
+</html>

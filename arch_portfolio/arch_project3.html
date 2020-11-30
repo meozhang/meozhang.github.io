@@ -1,0 +1,253 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>meo - arch</title>
+
+        <!--GOOGLE FONTS-->
+        <link href="https://fonts.googleapis.com/css2?family=Rasa:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+        <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;600&display=swap" rel="stylesheet">
+
+        <link rel="icon" type="image/png" href="asset/favicon.png">
+        
+        <!--library -->
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+        
+        <!--greensock animation-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js" integrity="sha512-IQLehpLoVS4fNzl7IfH8Iowfm5+RiMGtHykgZJl9AWMgqx0AmJ6cRWcB+GaGVtIsnC4voMfm8f2vwtY+6oPjpQ==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/ScrollTrigger.min.js" integrity="sha512-wK2NuxEyN/6s53M8G7c6cRUXvkeV8Uh5duYS06pAdLq4ukc72errSIyyGQGYtzWEzvVGzGSWg8l79e0VkTJYPw==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
+        
+        <!-- css -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" href="./style/arch_home_style.css">
+    </head>
+
+    <body>
+        <!--CURSOR -->
+        <div class="cursor"></div>
+        <!--JAVASCRIPT-->
+        <script src="script/script.js"></script>
+
+        
+        <!--Navigation-->
+        <nav class="navbar navbar-expand-md navbar-light bg-white">
+            <a class="nav-link active d-flex flex-row" href="arch_home.html" style="margin-top: 15px;">
+                <div class = "green-dot"></div>
+                <p id = "logo-text">arch</p>
+            </a>
+            <!--the hamburger-->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse text-center" id="navbarTogglerDemo02">
+                <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="mailto:meozhang@gmail.com">meozhang@gmail.com</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="arch_about.html">about</a>
+                    </li>
+                </ul>
+                <ul class="nav navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link dropdown-toggle" href="arch_about.html" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            architecture
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right text-center" aria-labelledby="navbarDropdownMenuLink">
+                        <a class="dropdown-item" href="arch_project1.html">mega-transportation</a>
+                        <a class="dropdown-item" href="arch_project2.html">the swing</a>
+                        <a class="dropdown-item" href="arch_project3.html">la siarrita</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        
+        
+        <section class="container-fluid">
+
+            <!--Title Block-->
+            <div class="row">
+                <!--Title image carousel-->
+                <div class="col-12 col-md-7">
+                    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                        <ol class="carousel-indicators">
+                          <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                          <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                          <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                        </ol>
+                        <div class="carousel-inner">
+                          <div class="carousel-item active">
+                            <img class="d-block w-100" src="asset/p3_0title.png" alt="title image: project la siarrita">
+                          </div>
+                          <div class="carousel-item">
+                            <img class="d-block w-100" src="asset/p3_0title.png" alt="title image: project la siarrita">
+                          </div>
+                          <div class="carousel-item">
+                            <img class="d-block w-100" src="asset/p3_0title.png" alt="title image: project la siarrita">
+                          </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-2 col-md-1"></div>
+
+                <!--Title Title Title-->
+                <div class="col-10 col-md-4 p-4">
+                    <div id="project1-h1" class="mt-12">
+                        <h1>LA SIERRITA</h1>
+                        <h2>RESIDENCE</h2>
+                    </div>
+
+                    <div id = "project1-graph" class = "d-flex align-items-center ml-12 mt-6" style="opacity: 0;">
+                        <div class = "green-line-long"></div>
+                        <div class = "green-dot-sm"></div>
+                    </div>
+                    <p id="project3-h1" class="mt-4">Lake|Flato Architects<br>
+                        2018 - 2020
+                    </p>
+                </div>    
+
+                <!--Decorative Green Circle-->
+                <div id = "green-circle-4"></div>  
+            </div>
+
+            <!--Text Block-->
+            <div class= "row slide-in">
+                <div class="col-1 col-md-2"></div>
+                <div class="col-10 col-md-6">
+                    <h3>introduction</h3>
+                    <p>La Sierrita Residence is a private vacation house located among the beautiful hills in Monterrey, Mexico. The Material palette is designed to embrace the vernacular building language and local artisan products. The bold formed concrete is balanced with weathered wood siding, to deliver the clean and sophisticated look with warmth and comfort.</p>
+                    <p>As the two concrete volumes intersecting, the open great room for gathering and the private living areas are naturally connected and divided.</p>
+                    <p>I joined the project for construction documents and I mainly participated in the interior design. I helped product research and created design options for great room and living space, with furniture layouts, delivered options with rendering and technical drawings. I was heavily involved in finalizing the documentation in Revit, detailing door and windows, fireplaces.</p>
+                    
+                </div>
+                <div class="col-1 col-md-4"></div>
+            </div>
+
+            <!-- image -->
+            <div class = "row slide-in">
+                <div class="col-12 col-md-6 d-flex align-items-center justify-content-between">
+                    <img class="img-fluid img-zoom" src="asset/p3_2Section1.jpg" alt="project 3 site section 1" data-toggle="modal" data-bigimage="asset/p3_2Section1.jpg" data-target="#myModal"/>
+                </div>
+                <div class="col-12 col-md-6 d-flex align-items-center justify-content-between">
+                    <img class="img-fluid img-zoom" src="asset/p3_2section2.jpg" alt="project 3 site section 2" data-toggle="modal" data-bigimage="asset/p3_2section2.jpg" data-target="#myModal"/>
+                </div>
+            </div>
+
+            <!--Text Block-->
+            <div class= "row slide-in">
+                <div class="col-1 col-md-4"></div>
+                <div class="col-10 col-md-4">
+                    <h3>on the hill
+                    </h3>
+                    <p>Located on a steep hill created interesting design challenges and opportunities.
+                        As driving down the main road gives a clear view of the house, landscape is
+                        strategically designed to provide a level of privacy; the roof wi ll be covered
+                        with gravel and par t of the roof will be designed as green roof. The concept
+                        promoted here is to let nature take over, reclaiming the house and adding a new
+                        layer of “design“ on top of the built structure.
+                    </p>
+                </div>
+                <div class="col-1 col-md-4"></div>
+            </div>
+
+            <!--Text Block + Image-->
+            <div class= "row slide-in">
+                <div id = "pro3-4" class="col-12 col-md-6 d-flex align-items-center justify-content-between">
+                    <img class="img-fluid img-zoom" src="asset/p3_1site.jpg" alt="project 3 site map" data-toggle="modal" data-bigimage="asset/p3_1site.jpg" data-target="#myModal"/>
+                </div>
+
+                <div id = "pro3-1" class="col-2 col-md-2"></div>
+                <div id = "pro3-2" class="col-8 col-md-2" style="margin-top: 50px;">
+                    <h3>site plan</h3>
+                    <p>As the site plan shows, La Sierrita embraced the existing landscape, not only by full sized window and doors that introduced visual connection, by also by the porches and private courtyard space that encouraged outdoor activities.</p>
+                </div>
+                <div id = "pro3-3" class="col-2 col-md-2"></div>
+            </div>
+
+
+            <!-- image -->
+            <div class = "row slide-in">
+                <div class="col-md-2"></div>
+                <div class="col-12 col-md-8 d-flex align-items-center justify-content-between">
+                    <img class="img-fluid img-zoom" src="asset/p3_3fireplace.jpg" alt="project 3 construction document of fireplace" data-toggle="modal" data-bigimage="asset/p3_3fireplace.jpg" data-target="#myModal" />
+                </div>
+                <div class="col-md-2"></div>
+            </div>
+
+            <!--Text Block-->
+            <div class= "row slide-in">
+                <div class="col-2 col-md-4"></div>
+                <div class="col-8 col-md-4">
+                    <h3>the concrete
+                    </h3>
+                    <p>The image below is a rendering of the great room, featuring the dialogue between two chimney, and the transition between living space to dining space.
+                    </p>
+                </div>
+                <div class="col-2 col-md-4"></div>
+            </div>
+
+            <!-- image -->
+            <div class = "row slide-in">
+                <div class="col-12 col-md-12 d-flex align-items-center justify-content-between">
+                    <img class="img-fluid img-zoom" src="asset/p3_4living.jpg" alt="project 3 rendering of living room" data-toggle="modal" data-bigimage="asset/p3_4living.jpg" data-target="#myModal"/>
+                </div>
+            </div>
+        </section>
+
+        <!-- The Image Lightbox-->
+        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>        
+                        <img src="asset/p1_0title.png" alt="" id="modal-image" class="img-fluid">
+                    </div>
+                </div>
+            </div>
+        </div> 
+        
+        <!--Footer-->
+        <footer class="navbar navbar-expand-md navbar-light bg-white">
+            <a class="nav-link active" id="footer-green-dot" href="arch_home.html">
+                <div class = "green-dot"></div>
+            </a>
+
+            <div class="collapse navbar-collapse text-center" id="navbarNav">
+                <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="mailto:meozhang@gmail.com">meozhang@gmail.com</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">about</a>
+                    </li>
+                </ul>
+                <ul class="nav navbar-nav ml-auto">
+                    <li class="nav-item dropup">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            architecture
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right text-center" aria-labelledby="navbarDropdownMenuLink">
+                        <a class="dropdown-item" href="arch_project1.html">mega-transportation</a>
+                        <a class="dropdown-item" href="arch_project2.html">the swing</a>
+                        <a class="dropdown-item" href="arch_project3.html">la siarrita</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </footer>
+        <div style="width:100%; height:80px; background-color: #9db290;"></div>
+    
+    </body>
+</html>
