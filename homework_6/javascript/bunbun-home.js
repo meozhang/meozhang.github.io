@@ -1,3 +1,4 @@
+
 //GLOBAL VARIBLES
 
 var totalCartNum = 0;
